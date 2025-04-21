@@ -1,5 +1,5 @@
-import React from 'react'
-import Marquee from './Marquee'
+import React from "react";
+import Marquee from "./Marquee";
 
 const Marquees = () => {
   var images = [
@@ -29,11 +29,15 @@ const Marquees = () => {
   ];
   return (
     <div className="py-20 w-full relative overflow-hidden">
-    {images.map((item, index) => (
-      <Marquee key={index} direction={index===0 ? "left" : "right"} imagesurls={item} />
-    ))}
-  </div>
-  )
-}
+      {images.map((item, index) => (
+        <Marquee
+          key={index}
+          direction={index === 0 ? "left" : "right"}
+          imagesurls={item}
+        />
+      ))}
+    </div>
+  );
+};
 
-export default Marquees
+export default Marquees;

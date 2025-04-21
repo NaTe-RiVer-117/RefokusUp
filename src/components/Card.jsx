@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const Card = ({ 
-  width, 
-  start, 
-  para, 
+const Card = ({
+  width,
+  start,
+  para,
   hover = "false",
-  heading = "Get in Touch", 
-  title , 
+  heading = "Get in Touch",
+  title,
 }) => {
-    
   return (
     <motion.div
       whileHover={{
@@ -32,7 +31,10 @@ const Card = ({
             <h1 className=" text-8xl font-semi-bold text-white tracking-tight leading-none">
               Start a Project
             </h1>
-            <button href="#" className="rounded-full py-2 px-5 mt-5 border group-hover:bg-black text-white border-zinc-50">
+            <button
+              href="#"
+              className="rounded-full py-2 px-5 mt-5 border group-hover:bg-black text-white border-zinc-50"
+            >
               Contact Us
             </button>
           </>
@@ -40,12 +42,12 @@ const Card = ({
 
         {para && (
           <p className="text-sm text-zinc-500 font-medium">
-           Explore what drives our team 
+            Explore what drives our team
           </p>
         )}
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

@@ -32,7 +32,9 @@ const Navbar = () => {
                 {index === 1 && (
                   <span className="inline-block w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_0.2em_#00FF99,0_0_0.4em_#00FF99,0_0_1em_#00FF99] animate-pulse"></span>
                 )}
-                <span className="group-hover:scale-125 transition-transform">{item}</span>
+                <span className="group-hover:scale-125 transition-transform">
+                  {item}
+                </span>
               </a>
             )
           )}
@@ -73,8 +75,10 @@ const Navbar = () => {
               </a>
             ))}
             <div className="w-full pt-4 border-t border-gray-700">
-              <Button className=" hover:bg-[#00ff1e] 
-        hover:shadow-[0_0_1em_#00FF1e] " />
+              <Button
+                className=" hover:bg-[#00ff1e] 
+        hover:shadow-[0_0_1em_#00FF1e] "
+              />
             </div>
           </div>
         </div>

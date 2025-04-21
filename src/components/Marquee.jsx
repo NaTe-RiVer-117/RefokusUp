@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import { motion } from 'framer-motion'
-const Marquee = ({imagesurls , direction}) => {
+import { motion } from "framer-motion";
+const Marquee = ({ imagesurls, direction }) => {
   return (
     <div className="flex w-full overflow-hidden shadow-[0_0_0.9em_#00FF1e]">
       <motion.div
@@ -25,7 +25,7 @@ const Marquee = ({imagesurls , direction}) => {
         ))}
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Marquee
+export default Marquee;
