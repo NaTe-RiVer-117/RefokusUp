@@ -5,10 +5,20 @@ const Footer = () => {
     <>
       <div className="w-full select-none">
         <div className=" max-w-screen-xl mx-auto py-10 flex gap-32">
-          <div className="basis-1/2">
+          <div className="basis-1/2 leading-none">
             <h1 className="text-[11.5rem] text-white font-semibold leading-none tracking-tight">
               refokus.
             </h1>
+           <div className="flex gap-4 mt-10 ml-5 leading-none">
+            {["Privacy Policy", "Cookie Policy","Impressum", "Terms"].map((item, index) => (
+              <a
+                key={index}
+                className="block mt-2 capitalize hover:text-white text-zinc-400"
+              >
+                {item}
+              </a>
+            ))}
+           </div>
           </div>
           <div className="basis-1/2 flex gap-4">
             <div className="basis-1/3">
