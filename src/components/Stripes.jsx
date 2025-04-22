@@ -37,7 +37,7 @@ const Stripes = () => {
           bg-slate-950
           data-scroll
           mt-5
-          shadow-[0_0_7em_#00ff1e]
+          shadow-[0_0_9em_#00ff1e,0_0_5em_#00ff1e,0_0_2em_#00ff1e]
         ">
           {data.map((elem, index) => (
             <Stripe key={index} val={elem} />

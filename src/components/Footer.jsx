@@ -13,6 +13,7 @@ const Footer = () => {
             {["Privacy Policy", "Cookie Policy","Impressum", "Terms"].map((item, index) => (
               <a
                 key={index}
+                href=""
                 className="block mt-2 capitalize hover:text-white text-zinc-400"
               >
                 {item}
@@ -28,6 +29,7 @@ const Footer = () => {
               {["instagram", "twitter (x?)", "LinkedIn"].map((item, index) => (
                 <a
                   key={index}
+                  href=""
                   className="block mt-2 capitalize hover:text-white text-zinc-400"
                 >
                   {item}
@@ -41,6 +43,7 @@ const Footer = () => {
               {["Home", "Work", "Careers", "Contact"].map((item, index) => (
                 <a
                   key={index}
+                  href=""
                   className="block mt-2 capitalize hover:text-white text-zinc-400"
                 >
                   {item}
@@ -54,7 +57,7 @@ const Footer = () => {
               </p>
               <img
                 className="w-32 mt-12"
-                src="https://assets-global.website-files.com/5df3de8e749203dc3167a479/65369e818884afbae46a35fc_Webflow-badge.svg"
+                src="https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66bd4a1138d6a32addf4b6b2_premium_partner_badge_enterprise_blue.webp"
                 alt="logo"
               />
             </div>

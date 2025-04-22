@@ -41,10 +41,10 @@ const Work = () => {
   ]);
 
   return (
-    <div className="w-full overflow-hidden font-[sathoshi]">
+    <div className="w-full overflow-hidden ">
       <div className="max-w-screen-xl relative mx-auto select-none leading-none px-4 py-3 text-center font-medium">
         {/* Responsive text size */}
-        <h1 className="text-[25vw] sm:text-[15vw] md:text-[35vw] text-shadow-[0_0_0.02em_#00ff00] text-white">
+        <h1 className="text-[25vw] sm:text-[15vw] md:text-[35vw] text-shadow-[0_0_0.02em_#00ff1e] text-white">
           work
         </h1>
 

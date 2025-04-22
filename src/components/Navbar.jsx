@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-screen-xl w-full text-white mx-auto py-6 select-none bg-slate-950 font-[satoshi] border-b-[1px] border-gray-700 flex items-center justify-between px-4 md:px-12">
+    <div className="max-w-screen-lg w-full text-white mx-auto py-6 select-none bg-slate-950 font-[satoshi] border-b-[1px] border-gray-700 flex items-center justify-between px-4 md:px-12">
       <div className="flex items-center  gap-6 md:gap-14">
         <img
           className="h-7"
@@ -75,10 +75,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className="w-full pt-4 border-t border-gray-700">
-              <Button
-                className=" hover:bg-[#00ff1e] 
-        hover:shadow-[0_0_1em_#00FF1e] "
-              />
+              <Button />
             </div>
           </div>
         </div>

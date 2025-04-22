@@ -2,7 +2,7 @@ import React from "react";
 
 const Product = ({ val }) => {
     return (
-        <div className="w-full  select-none py-20  text-white hover:bg-gradient-to-tr group from-slate-950 via-[#00FF1e]/40 to-slate-950">
+        <div className="w-full  select-none py-20  text-white hover:bg-gradient-to-tr group from-slate-950 via-gray-900 to-slate-950">
             <div className=" max-w-screen-xl mx-auto flex  items-center justify-between ">
                 <h1 className="text-5xl  font-semibold capitalize ">{val.title}</h1>
                 <div className="w-1/3 select-none leading-none">

@@ -14,7 +14,7 @@ const Card = ({
     <motion.div
       whileHover={{
         backgroundColor: hover === "true" && "#05c041",
-        padding: "25px",
+        padding: "50px",
       }}
       className={`bg-slate-800 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] group flex flex-col justify-between`}
     >
@@ -41,7 +41,7 @@ const Card = ({
         )}
 
         {para && (
-          <p className="text-sm text-zinc-500 font-medium">
+          <p className="text-sm text-zinc-300 font-medium">
             Explore what drives our team
           </p>
         )}
