@@ -18,22 +18,22 @@ const Card = ({
       }}
       className={`bg-slate-800 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] group flex flex-col justify-between`}
     >
-      <div className="w-full">
+      <div className="w-full select-none">
         <div className="w-full flex justify-between text-white items-center">
           <h3>{heading}</h3>
           <FaArrowRightLong />
         </div>
         <h1 className="text-3xl font-medium text-white mt-5">{title}</h1>
       </div>
-      <div className="down w-full ">
+      <div className="down w-full select-none ">
         {start && (
           <>
             <h1 className=" text-8xl font-semi-bold text-white tracking-tight leading-none">
               Start a Project
             </h1>
             <button
-              href="#"
-              className="rounded-full py-2 px-5 mt-5 border group-hover:bg-black text-white border-zinc-50"
+              href=""
+              className="rounded-full py-2 px-5 mt-5 border group-hover:font-semibold select-none hover:text-xl group-hover:bg-black text-white border-zinc-50"
             >
               Contact Us
             </button>

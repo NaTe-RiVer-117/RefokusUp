@@ -7,11 +7,16 @@ import Marquees from "./components/Marquees.jsx";
 import "./App.css";
 import Cards from "./components/Cards.jsx";
 import Footer from "./components/Footer.jsx";
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
+
+  const locomotiveScroll = new LocomotiveScroll();
+
+
   return (
     <>
-      <div className="w-full h-screen bg-slate-950 overflow-y-auto animated-scrollbar">
+      <div className="w-full bg-slate-950 ">
         <Navbar />
         <Work />
         <Stripes />
