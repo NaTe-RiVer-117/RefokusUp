@@ -39,9 +39,12 @@ const Products = () => {
         },
     ];
     return (
-        <div className='w-full bg-slate-950'>
+        <div className='w-full pt-30 bg-slate-950 relative'>
             {products.map((elem, index) => (<Product val={elem} key={index} />))}
+            <div className="w-full h-full bg-sky-400 absolute">
 
+
+            </div>
         </div>
     )
 }

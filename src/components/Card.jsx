@@ -6,17 +6,17 @@ const Card = ({
   width,
   start,
   para,
-  hover = "false",
+  hover,
   heading = "Get in Touch",
   title,
 }) => {
   return (
     <motion.div
       whileHover={{
-        backgroundColor: hover === "true" && "#05c041",
+        backgroundColor: hover ,
         padding: "50px",
       }}
-      className={`bg-slate-800 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] group flex flex-col justify-between`}
+      className={`p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] group flex flex-col justify-between`}
     >
       <div className="w-full select-none">
         <div className="w-full flex justify-between text-white items-center">
@@ -32,8 +32,8 @@ const Card = ({
               Start a Project
             </h1>
             <button
-              href=""
-              className="rounded-full py-2 px-5 mt-5 border group-hover:font-semibold select-none hover:text-xl group-hover:bg-black text-white border-zinc-50"
+              href={null}
+              className="rounded-full py-2 px-5 mt-5 border group-hover:font-semibold select-none hover:text-xl  text-white border-zinc-50"
             >
               Contact Us
             </button>

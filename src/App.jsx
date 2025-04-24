@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Work from "./components/Work";
 import Stripes from "./components/Stripes";
@@ -8,11 +8,17 @@ import "./App.css";
 import Cards from "./components/Cards.jsx";
 import Footer from "./components/Footer.jsx";
 import LocomotiveScroll from "locomotive-scroll";
+import 'locomotive-scroll/dist/locomotive-scroll.css'; // Required for smooth scrolling
 
 function App() {
 
-  const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      smooth: true, // <--- This is the only essential option
+    });
+  }, []);
 
+ 
 
   return (
     <>

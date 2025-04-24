@@ -13,7 +13,7 @@ const Footer = () => {
             {["Privacy Policy", "Cookie Policy","Impressum", "Terms"].map((item, index) => (
               <a
                 key={index}
-                href=""
+                href={null}
                 className="block mt-2 capitalize hover:text-white text-zinc-400"
               >
                 {item}
@@ -29,7 +29,7 @@ const Footer = () => {
               {["instagram", "twitter (x?)", "LinkedIn"].map((item, index) => (
                 <a
                   key={index}
-                  href=""
+                  href={null}
                   className="block mt-2 capitalize hover:text-white text-zinc-400"
                 >
                   {item}
@@ -43,7 +43,7 @@ const Footer = () => {
               {["Home", "Work", "Careers", "Contact"].map((item, index) => (
                 <a
                   key={index}
-                  href=""
+                  href={null}
                   className="block mt-2 capitalize hover:text-white text-zinc-400"
                 >
                   {item}
