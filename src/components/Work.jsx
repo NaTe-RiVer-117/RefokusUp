@@ -42,22 +42,21 @@ const Work = () => {
   ]);
 
 
-  const [activeIndices, setActiveIndices] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(0);
   const { scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const scrollPercent = latest * 100;
-    let newActiveIndices = [];
-
-    if (scrollPercent >= 8) newActiveIndices = [0, 1, 2, 3, 4, 5];
-    else if (scrollPercent >= 6) newActiveIndices = [0, 1, 2, 3, 4];
-    else if (scrollPercent >= 4) newActiveIndices = [0, 1, 2, 3];
-    else if (scrollPercent >= 3) newActiveIndices = [0, 1, 2];
-    else if (scrollPercent >= 2) newActiveIndices = [0, 1];
-    else if (scrollPercent >= 1) newActiveIndices = [0];
-    else newActiveIndices = [];
-
-    setActiveIndices(newActiveIndices);
+    const percent = Math.floor(latest * 100);
+    let count = 0;
+    
+    if (percent >= 8) count = 6;
+    else if (percent >= 6) count = 5;
+    else if (percent >= 4) count = 4;
+    else if (percent >= 3) count = 3;
+    else if (percent >= 2) count = 2;
+    else if (percent >= 1) count = 1;
+    
+    setVisibleCount(count);
   });
 
   return (
@@ -70,6 +69,7 @@ const Work = () => {
         <div className="absolute top-0 w-full h-full">
           {images.map((image, index) => (
             <motion.img
+              key={index}
               className="absolute w-40 md:w-50 rounded-lg -translate-x-1/2 -translate-y-1/2"
               style={{
                 top: image.top,
@@ -78,11 +78,10 @@ const Work = () => {
               }}
               src={image.url}
               alt="Work"
-              key={index}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
-                opacity: activeIndices.includes(index) ? 1 : 0,
-                scale: activeIndices.includes(index) ? 1 : 0.8,
+                opacity: index < visibleCount ? 1 : 0,
+                scale: index < visibleCount ? 1 : 0.8,
               }}
               transition={{ type: "spring", damping: 10, stiffness: 100 }}
             />
