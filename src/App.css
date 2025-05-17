@@ -1,14 +1,48 @@
 ::-webkit-scrollbar {
-  width: 6px;
-
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:#00FF1e ;
+  background-color: #00FF1e;
   border-radius: 40px;
- 
 }
 
 ::-webkit-scrollbar-track {
   background-color: #18181B;
+}
+
+/* Add responsive global styles */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Mobile-first media queries */
+@media (max-width: 640px) {
+  .text-shadow-glow {
+    text-shadow: 0 0 0.3em #00FF1e;
+  }
+  
+  /* Reduce glow effects on mobile */
+  .shadow-glow {
+    box-shadow: 0 0 0.5em #00FF1e;
+  }
+}
+
+/* Tablet and above */
+@media (min-width: 641px) {
+  .text-shadow-glow {
+    text-shadow: 0 0 0.6em #00FF1e, 0 0 1em #00FF1e;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 1em #00FF1e, 0 0 2em #00FF1e;
+  }
+}
+
+/* Better font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

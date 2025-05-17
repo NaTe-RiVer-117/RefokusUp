@@ -28,7 +28,8 @@ const Marquees = () => {
     ],
   ];
   return (
-    <div className="py-20 w-full relative overflow-hidden">
+    // Added margin-bottom to create space between Marquees and Cards
+    <div className="py-8 sm:py-12 md:py-16 lg:py-20 w-full relative overflow-hidden mb-16 sm:mb-24 md:mb-8">
       {images.map((item, index) => (
         <Marquee
           key={index}

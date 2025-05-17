@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useScroll,useMotionValueEvent,motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 
 const Work = () => {
   const [images, setImages] = useState([
@@ -41,12 +41,14 @@ const Work = () => {
     },
   ]);
 
-
   const [visibleCount, setVisibleCount] = useState(0);
   const { scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const percent = Math.floor(latest * 100);
+    // Adjust scroll speed based on screen size
+    const multiplier = window.innerWidth < 768 ? 1.6 : 1;
+    const percent = Math.floor(latest * 100 * multiplier);
+    
     let count = 0;
     
     if (percent >= 8) count = 6;
@@ -60,21 +62,24 @@ const Work = () => {
   });
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className="max-w-screen-xl relative mx-auto select-none leading-none px-4 py-3 text-center font-medium">
-        <h1 className="text-[25vw] sm:text-[15vw] md:text-[35vw] text-shadow-[0_0_0.02em_#00ff1e] text-white">
+    <div className="w-full overflow-hidden mt-10 md:mt-20">
+      <div className="relative mx-auto select-none leading-none px-4 py-2 md:py-5 text-center font-medium">
+        {/* Maintain original text with better responsive scaling */}
+        <h1 className="text-[23vw] md:text-[28vw] lg:text-[35vw] text-shadow-[0_0_0.02em_#00ff1e] text-white pb-20 md:pb-28 lg:pb-40">
           work
         </h1>
 
-        <div className="absolute top-0 w-full h-full">
+        {/* Container to ensure proper height on mobile */}
+        <div className="absolute top-0 w-full h-full min-h-[60vh]">
           {images.map((image, index) => (
             <motion.img
               key={index}
-              className="absolute w-40 md:w-50 rounded-lg -translate-x-1/2 -translate-y-1/2"
+              className="absolute w-32 md:w-auto rounded-lg -translate-x-1/2 -translate-y-1/2 z-10"
               style={{
                 top: image.top,
                 left: image.left,
-                width: "clamp(100px, 20vw, 200px)",
+                // Preserve original width logic but adjust for mobile
+                width: `clamp(120px, ${window.innerWidth < 768 ? '30vw' : '20vw'}, 200px)`,
               }}
               src={image.url}
               alt="Work"
